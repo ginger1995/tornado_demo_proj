@@ -13,8 +13,8 @@ class IndexHandler(tornado.web.RequestHandler):
     def post(self):
         word = self.get_argument("word")
         word_item = mrd.select_table(
-            table='wordbank', column='*', condition='word', value="\\\'"+word+"\\\'")
+            table='wordbank', column='*', condition='word', value=word)
         if word_item == ():
             self.write("nodata")
         else:
-            self.write("\\\'happy\\\'")
+            self.write(word)
