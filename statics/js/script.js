@@ -9,7 +9,12 @@ $(document).ready(function(){
             data:post_data,
             cache:false,
             success:function(data){
-                alert(data);
+                if(data=="nodata"){
+                    alert("can not find this word!");
+                }
+                else{
+                    window.location.href = "/dictionary?word="+data;
+                }
             },
             error:function(){
                 alert("error!");

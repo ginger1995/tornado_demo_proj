@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word</title>
+</head>
+<body>
+    <h2>Your query is:</h2>
+    <ul>
+        {% for one in worditem %}
+            <li>word:{{one[0]}}</li>
+            <li>brief expain:{{one[1]}}</li>
+            <li>explict explain:{{one[2]}}</li>
+        {% end %}
+    </ul>
+</body>
